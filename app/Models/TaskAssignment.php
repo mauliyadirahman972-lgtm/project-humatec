@@ -4,8 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Traits\RecyclesIds;
+
 class TaskAssignment extends Model
 {
+    use RecyclesIds;
+
     protected $fillable = ['task_id', 'employee_id'];
 
     public function task()
